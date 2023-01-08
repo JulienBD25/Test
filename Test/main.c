@@ -1,10 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello, World!xcvxwvxcv\n");
-    printf("Autre chhose");
-    printf("Autre chhose");
-    printf("Autre");
-    printf("la je test la branche");
+    char reponseBinaire; // caractère pour stocker la réponse
+
+    printf("\nVoulez-vous tourné votre carte ? (o = oui // n = non)\n");
+    while (1) {
+        scanf("%c", &reponseBinaire);
+        if (reponseBinaire == 'O' || reponseBinaire == 'o' || reponseBinaire == 'N' || reponseBinaire == 'n') {
+            break; // sortie de la boucle
+        }
+        while (getchar() != '\n'); // vide le tampon
+        printf("Reessayez :\n");
+    }
+
     return 0;
 }
